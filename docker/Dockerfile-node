@@ -1,0 +1,10 @@
+FROM node:12-buster
+
+ENV OT_PYTHON="/usr/bin/env python3"
+ENV LC_ALL=C.UTF-8
+ENV LANG=C.UTF-8
+
+RUN apt-get update && apt-get install -y make curl git libsystemd-dev pylama \
+                                        yarn python3-dev python3-pip  
+
+CMD bash
